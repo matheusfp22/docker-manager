@@ -17,8 +17,8 @@ public class DockerClientConfig {
     @Value("${docker.host}")
     private String dockerHost;
 
-    @Value("${docker.tsl_verify}")
-    private String dockerTslVerify;
+    @Value("${docker.tls_verify}")
+    private String dockerTlsVerify;
 
     @Value("${docker.cert_path}")
     private String dockerCertPath;
@@ -29,7 +29,7 @@ public class DockerClientConfig {
 
         dockerClientConfigBuilder
                 .withDockerHost(dockerHost)
-                .withDockerTlsVerify(dockerTslVerify)
+                .withDockerTlsVerify(dockerTlsVerify)
                 .withDockerCertPath(dockerCertPath)
                 .withApiVersion(RemoteApiVersion.VERSION_1_24);
 
